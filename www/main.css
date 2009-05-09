@@ -1,0 +1,125 @@
+body{
+  font-family:helvetica;
+  margin:0;
+  background:#fff;
+}
+h1{
+  margin:35px 20px 0px;
+  font-size:1.5em;
+  padding:0px;
+  color:#999;
+}
+h3{
+  margin:0px 20px 5px;
+  font-size:.8em;
+  padding-left:30px;
+  font-style:italic;
+  color:#822;
+  
+}          
+div#wrap{
+  width:520px;
+  height:460px;
+  overflow:hidden;
+}
+p{
+  margin:20px;
+  font-size:.9em;
+  line-height:1.35em;
+  color:#222;
+}
+
+/* navigation */
+ul.nav{
+  background: #e6e6e6;
+  border-top:1px solid #ddd;
+  border-bottom:1px solid #888;
+  width:100%;
+  font-size:93%;
+  overflow:auto;
+  margin:0;
+  padding:0;
+  list-style:none;
+  padding-left:6px;
+
+}
+ul.nav li{
+  margin:0;
+  padding:0;
+  float:left;
+}
+ul.nav a{
+  margin:5px 5px 5px 0px;
+  display:block;
+  padding:4px 21px 6px;
+  text-decoration:none;
+  opacity:.8;
+  font-weight:bold;
+  color:#fff;
+  text-shadow: 1px 1px 2px #0b1b44;
+  
+  border:1px inset #abc;
+  -webkit-border-radius:3px;
+  background: #ccc;
+}
+
+
+ul.nav a.selected{
+  text-shadow: 1px 1px 2px #0b1b44;
+  border:1px inset #58a;
+  background: #777;
+}
+
+/* basic page setup */
+div#pages {
+  clear:both;
+  margin:0;
+  padding:0;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: .5s;
+}
+div#pages > div{
+  width: 320px;
+  height: 460px; 
+  position:absolute;
+  background:#ddd;
+}
+
+/* transformation for when class is applied */
+div#pages.speakers  { -webkit-transform:translateX(0px); }
+div#pages.schedule  { -webkit-transform:translateX(-320px); }
+div#pages.twitter   { -webkit-transform:translateX(-640px); }
+
+
+div#pages ul, div#pages li {
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+
+/* style of each page */
+div#speakers,div#schedule,li#twitter{ 
+  width:320px; 
+  height:370px;
+}
+div#schedule{
+  left:320px;
+}
+div#twitter{
+  left:640px;
+}
+
+#flipper{
+  background:#fffbe5;
+  margin:0px 15px;
+  padding:1px;
+  -webkit-border-radius:5px;
+  border:1px solid #efe4a5;
+}
+#flipper p{
+  margin:5px 10px;
+}
+#flipper a{
+  font-weight:bold;
+  color:#811;
+}
