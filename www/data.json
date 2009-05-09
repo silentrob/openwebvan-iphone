@@ -1,0 +1,41 @@
+{
+"announcements": {
+  "notice": "Drinks tonight at Alibi room. 9:00pm",
+  "alert": "urgent - looking for a DIV to VGA cable in room 201"
+},
+ 
+"details": {
+  "when": "Thursday June 11 - Friday June 12th 2009",
+  "where": "Vancouver Convention & Exhibition Centre (VCEC)",
+  "geolocation": "49.314324,-123.107815",
+  "wifi-password": "78kkrm3"
+},
+ 
+"sessions": [
+  {
+  "datetime": "YYYY-MM-DD HH:MM",
+  "speaker": { "name": "John Doe",
+               "twitter": "jdoe",
+               "thumb": "http://example.com/joe.jpg",
+               "site": "http://example.com",
+               "bio": "this person is pretty cool"
+             },
+  "title": "Phonegap. I cant believe its not native!",
+  "description": "a really cool talk about phonegap",
+  "track": "A",
+  "room": "201"
+  },
+  {
+  "datetime": "YYYY-MM-DD HH:MM",
+  "speaker": { "name": "Gary Smith",
+               "twitter": "jdoe",
+               "thumb": "http://example.com/gary.jpg",
+               "site": "http://example.com",
+               "bio": "this person is pretty cool"
+             },
+  "title": "Drupal",
+  "description": "yay drupal",
+  "track": "B",
+  "room": "201"
+  }]
+}
