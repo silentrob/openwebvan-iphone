@@ -1,0 +1,203 @@
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+       <title>Open Web Vancouver</title>
+        <style>
+          body{
+            font-family:helvetica;
+            margin:0;
+            background:#fff;
+          }
+          h1{
+            margin:35px 20px 0px;
+            font-size:1.5em;
+            padding:0px;
+            color:#999;
+          }
+          h3{
+            margin:0px 20px 5px;
+            font-size:.8em;
+            padding-left:30px;
+            font-style:italic;
+            color:#822;
+            
+          }          
+          div#wrap{
+            width:320px;
+            height:460px;
+            overflow:hidden;
+            --border:1px solid black;
+          }
+          p{
+            margin:20px;
+            font-size:.9em;
+            line-height:1.35em;
+            color:#222;
+          }
+          /* navigation */
+          ul.nav{
+            background: -webkit-gradient(linear, left top, left bottom, 
+              from(#73a0b0), 
+              color-stop(0.50, #37768d),
+              color-stop(0.51, #236c85),
+              to(#1e5a76));
+              border-top:1px solid #8fb8c4;
+              border-bottom:1px solid #114e69;
+                
+            width:100%;
+            font-size:93%;
+            overflow:auto;
+            margin:0;
+            padding:0;
+            list-style:none;
+            padding-left:6px;
+ 
+          }
+          ul.nav li{
+            margin:0;
+            padding:0;
+            float:left;
+          }
+          ul.nav a{
+            margin:5px 5px 5px 0px;
+            display:block;
+            padding:4px 21px 6px;
+            text-decoration:none;
+            opacity:.8;
+            font-weight:bold;
+            color:#fff;
+            text-shadow: 1px 1px 2px #0b1b44;
+            
+            border:1px inset #69b;
+            -webkit-border-radius:3px;
+            background: -webkit-gradient(linear, left top, left bottom, 
+              from(#6390a0), 
+              color-stop(0.52, #27667d),
+              color-stop(0.53, #235c75),
+              to(#0e4a66));
+          }
+          
+          
+          ul.nav a.selected{
+            text-shadow: 1px 1px 2px #0b1b44;
+            border:1px inset #58a;
+            background: -webkit-gradient(linear, left top, left bottom, 
+              from(#437080), 
+              color-stop(0.52, #17465d),
+              color-stop(0.53, #133c55),
+              to(#002a46));
+          }
+ 
+          /* basic page setup */
+          ul#pages {
+            clear:both;
+            width: 1280px;
+            height: 370px;
+            margin:0;
+            padding:0;
+            -webkit-transition-property: -webkit-transform;
+            -webkit-transition-duration: .5s;
+          }
+          ul#pages > li{ 
+            float:left;
+          }
+          
+          /* transformation for when class is applied */
+          ul#pages.one  { -webkit-transform:translateX(0px); }
+          ul#pages.two  { -webkit-transform:translateX(-320px); }
+          ul#pages.three{ -webkit-transform:translateX(-640px); }
+          ul#pages.four { -webkit-transform:translateX(-960px); }
+          
+          /* style of each page */
+          li#one,li#two,li#three,li#four{ 
+            width:320px; 
+            height:370px;
+            
+          }
+/*          li#one  { background-color:#CFF09E;background-color:#fff; }
+          li#two  { background-color:#A8DBA8; }
+          li#three{ background-color:#79BD9A; }
+          li#four { background-color:#3B8686; }*/
+          
+          #foot{
+            background: -webkit-gradient(linear, left top, left bottom, 
+              from(#c7e2ed), to(#74aabf));
+            border-bottom:1px solid #8fb8c4;
+            border-top:1px solid #6da3b3;
+            height:47px;
+            
+          }
+          #foot h2{
+            text-align:center;
+            font-size:1em;
+            margin:7px 0px 2px;
+            font-style:italic;
+            color:#234;
+            text-shadow: 1px 1px 2px rgba(234,234,234,.6);
+          }
+          #foot h4{
+            text-align:center;
+            font-size:.76em;
+            font-style:italic;
+            margin:0px 0px 2px;
+            color:#123;
+            text-shadow: 1px 1px 2px rgba(234,234,234,.6);
+          }
+          
+          #flipper{
+            background:#fffbe5;
+            margin:0px 15px;
+            padding:1px;
+            -webkit-border-radius:5px;
+            border:1px solid #efe4a5;
+          }
+          #flipper p{
+            margin:5px 10px;
+          }
+          #flipper a{
+            font-weight:bold;
+            color:#811;
+          }
+          
+        </style>
+    </head>
+<body>
+  <div id="wrap">
+    <ul class="nav">
+      <li><a href="#" onclick="document.getElementById('pages').className = 'one'" class="selected">one</a></li>
+      <li><a href="#" onclick="document.getElementById('pages').className = 'two'">two</a></li>
+      <li><a href="#" onclick="document.getElementById('pages').className = 'three'">three</a></li>
+      <li><a href="#" onclick="document.getElementById('pages').className = 'four'">four</a></li>
+    </ul>
+    
+    <ul id="pages" class="one">  
+      <li id="one">
+        <h1>Step One</h1>
+        <h3>buid UI using html and css</h3>
+        <p>Building a great UI for phonegap is simple. Just use the shit you already know. Existing open web technologies is all you need.</p>
+        <p><strong>Did you know the iphone uses hardware acceleration for css transitions?</strong> Hell yes it does! If you don't yet use CSS transitions, what are you waiting for?</p>  
+      </li>
+      <li id="two">
+        <h1>Step Two</h1>
+        <h3>add XUI for javascript pizzaz</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </li>
+      <li id="three">
+        <h1>Step Three</h1>
+        <h3>drop it into PhoneGap</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </li>
+      <li id="four">
+        <h1>Step Four</h1>
+        <h3>profit! its now ready for the app store</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </li>
+    </ul>
+    
+    <div id="foot">
+      <h2>phonegap dev cycle</h2>
+      <h4>by sintaxi</h4>
+    </div>
+  </div>
+</body>
+</html>
