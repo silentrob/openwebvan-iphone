@@ -23,7 +23,7 @@
             
           }          
           div#wrap{
-            width:320px;
+            width:520px;
             height:460px;
             overflow:hidden;
             --border:1px solid black;
@@ -89,59 +89,35 @@
           }
  
           /* basic page setup */
-          ul#pages {
+          div#pages {
             clear:both;
-            width: 1280px;
-            height: 370px;
             margin:0;
             padding:0;
             -webkit-transition-property: -webkit-transform;
             -webkit-transition-duration: .5s;
           }
-          ul#pages > li{ 
-            float:left;
+          div#pages > div{
+            width: 320px;
+            height: 460px; 
+            position:absolute;
+            background:#ddd;
           }
           
           /* transformation for when class is applied */
-          ul#pages.one  { -webkit-transform:translateX(0px); }
-          ul#pages.two  { -webkit-transform:translateX(-320px); }
-          ul#pages.three{ -webkit-transform:translateX(-640px); }
-          ul#pages.four { -webkit-transform:translateX(-960px); }
+          div#pages.speakers  { -webkit-transform:translateX(0px); }
+          div#pages.schedule  { -webkit-transform:translateX(-320px); }
+          div#pages.twitter   { -webkit-transform:translateX(-640px); }
           
           /* style of each page */
-          li#one,li#two,li#three,li#four{ 
+          div#speakers,div#schedule,li#twitter{ 
             width:320px; 
             height:370px;
-            
           }
-/*          li#one  { background-color:#CFF09E;background-color:#fff; }
-          li#two  { background-color:#A8DBA8; }
-          li#three{ background-color:#79BD9A; }
-          li#four { background-color:#3B8686; }*/
-          
-          #foot{
-            background: -webkit-gradient(linear, left top, left bottom, 
-              from(#c7e2ed), to(#74aabf));
-            border-bottom:1px solid #8fb8c4;
-            border-top:1px solid #6da3b3;
-            height:47px;
-            
+          div#schedule{
+            left:320px;
           }
-          #foot h2{
-            text-align:center;
-            font-size:1em;
-            margin:7px 0px 2px;
-            font-style:italic;
-            color:#234;
-            text-shadow: 1px 1px 2px rgba(234,234,234,.6);
-          }
-          #foot h4{
-            text-align:center;
-            font-size:.76em;
-            font-style:italic;
-            margin:0px 0px 2px;
-            color:#123;
-            text-shadow: 1px 1px 2px rgba(234,234,234,.6);
+          div#twitter{
+            left:640px;
           }
           
           #flipper{
@@ -164,40 +140,33 @@
 <body>
   <div id="wrap">
     <ul class="nav">
-      <li><a href="#" onclick="document.getElementById('pages').className = 'one'" class="selected">one</a></li>
-      <li><a href="#" onclick="document.getElementById('pages').className = 'two'">two</a></li>
-      <li><a href="#" onclick="document.getElementById('pages').className = 'three'">three</a></li>
-      <li><a href="#" onclick="document.getElementById('pages').className = 'four'">four</a></li>
+      <li><a href="#" onclick="document.getElementById('pages').className = 'speakers'" class="selected">speakers</a></li>
+      <li><a href="#" onclick="document.getElementById('pages').className = 'schedule'">schedule</a></li>
+      <li><a href="#" onclick="document.getElementById('pages').className = 'twitter'">twitter</a></li>
     </ul>
     
-    <ul id="pages" class="one">  
-      <li id="one">
+    <div id="pages" class="speakers">  
+      
+      <div id="speakers">
         <h1>Step One</h1>
         <h3>buid UI using html and css</h3>
         <p>Building a great UI for phonegap is simple. Just use the shit you already know. Existing open web technologies is all you need.</p>
         <p><strong>Did you know the iphone uses hardware acceleration for css transitions?</strong> Hell yes it does! If you don't yet use CSS transitions, what are you waiting for?</p>  
-      </li>
-      <li id="two">
+      </div>
+      
+      <div id="schedule">
         <h1>Step Two</h1>
         <h3>add XUI for javascript pizzaz</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </li>
-      <li id="three">
+      </div>
+      
+      <div id="twitter">
         <h1>Step Three</h1>
         <h3>drop it into PhoneGap</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </li>
-      <li id="four">
-        <h1>Step Four</h1>
-        <h3>profit! its now ready for the app store</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </li>
-    </ul>
-    
-    <div id="foot">
-      <h2>phonegap dev cycle</h2>
-      <h4>by sintaxi</h4>
+      </div>
     </div>
+  
   </div>
 </body>
 </html>
